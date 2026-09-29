@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Ale Ventas Alerce | Ropa y más</title>
+
+  <meta name="description"
+        content="Ale Ventas Alerce - Ropa, accesorios y productos seleccionados en Alerce, Puerto Montt. Consulta disponibilidad por WhatsApp.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #fffaf8;
+      color: #3e3432;
+      line-height: 1.6;
+    }
+
+    /* ---------- HEADER ---------- */
+
+    header {
+      background: #ffffff;
+      padding: 18px 7%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 12px rgba(0,0,0,.07);
+    }
+
+    .logo {
+      font-size: 23px;
+      font-weight: bold;
+      color: #a85f67;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #4c3b3b;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #a85f67;
+    }
+
+    /* ---------- PORTADA ---------- */
+
+    .hero {
+      min-height: 78vh;
+      background:
+        linear-gradient(rgba(75,50,50,.25), rgba(75,50,50,.25)),
+        url("https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1600&q=80")
+        center/cover;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 30px;
+    }
+
+    .hero-content {
+      background: rgba(255,255,255,.91);
+      max-width: 650px;
+      padding: 45px 30px;
+      border-radius: 25px;
+    }
+
+    .hero h1 {
+      font-size: 45px;
+      color: #9d5961;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #a85f67;
+      color: white;
+      text-decoration: none;
+      padding: 13px 25px;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: .2s;
+    }
+
+    .btn:hover {
+      background: #84464d;
+      transform: translateY(-2px);
+    }
+
+    /* ---------- SECCIONES ---------- */
+
+    section {
+      padding: 70px 7%;
+    }
+
+    .titulo {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .titulo h2 {
+      color: #9d5961;
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+
+    .titulo p {
+      color: #776766;
+    }
+
+    /* ---------- PRODUCTOS ---------- */
+
+    .productos {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .producto {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0,0,0,.08);
+      transition: .25s;
+    }
+
+    .producto:hover {
+      transform: translateY(-5px);
+    }
+
+    .producto img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .producto-info {
+      padding: 22px;
+    }
+
+    .producto h3 {
+      margin-bottom: 6px;
+    }
+
+    .precio {
+      color: #a85f67;
+      font-size: 21px;
+      font-weight: bold;
+      margin: 8px 0 15px;
+    }
+
+    .producto .btn {
+      font-size: 14px;
+      padding: 10px 17px;
+    }
+
+    /* ---------- NOSOTROS ---------- */
+
+    .nosotros {
+      background: #f5e7e3;
+    }
+
+    .nosotros-contenido {
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .nosotros h2 {
+      color: #9d5961;
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    /* ---------- INFO ---------- */
+
+    .beneficios {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .beneficio {
+      text-align: center;
+      background: white;
+      padding: 30px 20px;
+      border-radius: 18px;
+      box-shadow: 0 4px 15px rgba(0,0,0,.06);
+    }
+
+    .beneficio .icono {
+      font-size: 35px;
+      margin-bottom: 10px;
+    }
+
+    /* ---------- CONTACTO ---------- */
+
+    .contacto {
+      text-align: center;
+      background: #fff;
+    }
+
+    .contacto h2 {
+      color: #9d5961;
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .contacto p {
+      margin-bottom: 22px;
+    }
+
+    .whatsapp {
+      background: #25D366;
+    }
+
+    .whatsapp:hover {
+      background: #1eae54;
+    }
+
+    /* ---------- BOTÓN FLOTANTE ---------- */
+
+    .whatsapp-flotante {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      background: #25D366;
+      color: white;
+      text-decoration: none;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 28px;
+      box-shadow: 0 4px 15px rgba(0,0,0,.25);
+      z-index: 1000;
+    }
+
+    /* ---------- FOOTER ---------- */
+
+    footer {
+      background: #3e3432;
+      color: white;
+      text-align: center;
+      padding: 28px 15px;
+    }
+
+    footer p {
+      font-size: 14px;
+    }
+
+    /* ---------- CELULAR ---------- */
+
+    @media (max-width: 800px) {
+
+      header {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      nav {
+        gap: 12px;
+      }
+
+      nav a {
+        font-size: 13px;
+      }
+
+      .hero {
+        min-height: 70vh;
+      }
+
+      .hero h1 {
+        font-size: 34px;
+      }
+
+      .productos {
+        grid-template-columns: 1fr;
+      }
+
+      .beneficios {
+        grid-template-columns: 1fr;
+      }
+
+      .producto img {
+        height: 330px;
+      }
+    }
+  </style>
+</head>
+
+
+<body>
+
+<!-- MENÚ -->
+
+<header>
+  <div class="logo">Ale Ventas Alerce ♡</div>
+
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#productos">Productos</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</header>
+
+
+<!-- PORTADA -->
+
+<section class="hero" id="inicio">
+
+  <div class="hero-content">
+
+    <h1>Ale Ventas Alerce</h1>
+
+    <p>
+      Ropa, accesorios y mucho más ♡
+      Encuentra productos lindos a precios accesibles
+      y consulta disponibilidad directamente por WhatsApp.
+    </p>
+
+    <a class="btn" href="#productos">
+      Ver productos
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- PRODUCTOS -->
+
+<section id="productos">
+
+  <div class="titulo">
+    <h2>Productos destacados</h2>
+    <p>Conoce algunos de nuestros productos disponibles.</p>
+  </div>
+
+
+  <div class="productos">
+
+
+    <!-- PRODUCTO 1 -->
+
+    <div class="producto">
+
+      <img
+        src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80"
+        alt="Polera">
+
+      <div class="producto-info">
+
+        <h3>Polera</h3>
+
+        <p>
+          Cómoda y perfecta para combinar con distintos outfits.
+        </p>
+
+        <div class="precio">$9.990</div>
+
+        <a
+          class="btn"
+          target="_blank"
+          href="https://wa.me/56950446613?text=Hola%20Ale%20Ventas%20Alerce%2C%20quisiera%20consultar%20por%20la%20polera.">
+
+          Consultar
+
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- PRODUCTO 2 -->
+
+    <div class="producto">
+
+      <img
+        src="https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=800&q=80"
+        alt="Jeans">
+
+      <div class="producto-info">
+
+        <h3>Jeans</h3>
+
+        <p>
+          Un básico para complementar tu clóset.
+        </p>
+
+        <div class="precio">$14.990</div>
+
+        <a
+          class="btn"
+          target="_blank"
+          href="https://wa.me/56950446613?text=Hola%20Ale%20Ventas%20Alerce%2C%20quisiera%20consultar%20por%20los%20jeans.">
+
+          Consultar
+
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- PRODUCTO 3 -->
+
+    <div class="producto">
+
+      <img
+        src="https://images.unsplash.com/photo-1591561954557-26941169b49e?auto=format&fit=crop&w=800&q=80"
+        alt="Accesorios">
+
+      <div class="producto-info">
+
+        <h3>Accesorios</h3>
+
+        <p>
+          Detalles para complementar tus looks favoritos.
+        </p>
+
+        <div class="precio">Desde $3.990</div>
+
+        <a
+          class="btn"
+          target="_blank"
+          href="https://wa.me/56950446613?text=Hola%20Ale%20Ventas%20Alerce%2C%20quisiera%20ver%20los%20accesorios%20disponibles.">
+
+          Consultar
+
+        </a>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<!-- SOBRE LA TIENDA -->
+
+<section class="nosotros" id="nosotros">
+
+  <div class="nosotros-contenido">
+
+    <h2>Sobre Ale Ventas Alerce</h2>
+
+    <p>
+      Somos un emprendimiento ubicado en Alerce dedicado a la
+      venta de ropa, accesorios y distintos productos.
+      Buscamos ofrecer alternativas bonitas, accesibles y
+      una atención cercana para nuestros clientes.
+    </p>
+
+    <br>
+
+    <p>
+      Si te interesa algún producto puedes consultar
+      disponibilidad, tallas, colores y formas de entrega
+      directamente por WhatsApp.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- BENEFICIOS -->
+
+<section>
+
+  <div class="titulo">
+
+    <h2>Compra fácil</h2>
+
+    <p>
+      Consulta directamente antes de realizar tu compra.
+    </p>
+
+  </div>
+
+
+  <div class="beneficios">
+
+    <div class="beneficio">
+      <div class="icono">♡</div>
+      <h3>Variedad</h3>
+      <p>Ropa, accesorios y diferentes productos.</p>
+    </div>
+
+
+    <div class="beneficio">
+      <div class="icono">⌂</div>
+      <h3>Alerce</h3>
+      <p>Emprendimiento local de Alerce, Puerto Montt.</p>
+    </div>
+
+
+    <div class="beneficio">
+      <div class="icono">✆</div>
+      <h3>Atención directa</h3>
+      <p>Consulta rápidamente a través de WhatsApp.</p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CONTACTO -->
+
+<section class="contacto" id="contacto">
+
+  <h2>¿Te gustó algo?</h2>
+
+  <p>
+    Escríbenos para consultar disponibilidad,
+    tallas, precios o coordinar tu compra.
+  </p>
+
+  <a
+    class="btn whatsapp"
+    target="_blank"
+    href="https://wa.me/56950446613?text=Hola%20Ale%20Ventas%20Alerce%2C%20vi%20su%20página%20y%20quisiera%20hacer%20una%20consulta.">
+
+    Hablar por WhatsApp
+
+  </a>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+  <p>© 2026 Ale Ventas Alerce</p>
+
+  <p>Ropa, accesorios y más ♡</p>
+
+</footer>
+
+
+<!-- WHATSAPP FLOTANTE -->
+
+<a
+  class="whatsapp-flotante"
+  target="_blank"
+  aria-label="WhatsApp"
+  href="https://wa.me/56950446613?text=Hola%20Ale%20Ventas%20Alerce%2C%20vi%20su%20página%20y%20quisiera%20hacer%20una%20consulta.">
+
+  ✆
+
+</a>
+
+
+</body>
+</html>
