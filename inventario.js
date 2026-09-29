@@ -507,7 +507,8 @@ const inventario = [
   notas: "Talla s,m y l,xl",
   stock: 12,
   precio: 7500
-}{
+},
+{
   codigo: 134,
   nombre: "Calza pitillo rib con polar",
   categoria: "Ropa invierno dama",
