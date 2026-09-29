@@ -1,23 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Ale Ventas Alerce</title>
+  <title>Ale Ventas Alerce | Tienda de ropa</title>
 
-  <meta
-    name="description"
-    content="Ale Ventas Alerce. Ropa, accesorios y más. Consulta nuestros productos disponibles por WhatsApp."
-  >
+  <meta name="description"
+        content="Ale Ventas Alerce. Ropa para mujer, jeans, conjuntos, buzos y más. Consulta disponibilidad por WhatsApp.">
 
   <style>
-
-    /* =========================
-       CONFIGURACIÓN GENERAL
-    ========================== */
-
     * {
       margin: 0;
       padding: 0;
@@ -30,782 +22,478 @@
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background-color: #fffafa;
-      color: #403838;
-      line-height: 1.6;
+      background: #fff8fb;
+      color: #3c3036;
     }
 
-
-    /* =========================
-       MENÚ
-    ========================== */
+    /* HEADER */
 
     header {
-      background-color: white;
-      padding: 18px 7%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-
-      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+      background: linear-gradient(135deg, #f7d9e5, #f1bfd2);
+      padding: 25px 20px 35px;
+      text-align: center;
     }
 
     .logo {
-      font-size: 23px;
-      font-weight: bold;
-      color: #a65f6a;
-    }
-
-    nav {
-      display: flex;
-      gap: 22px;
-    }
-
-    nav a {
-      color: #403838;
-      text-decoration: none;
-      font-size: 14px;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      color: #a65f6a;
-    }
-
-
-    /* =========================
-       PORTADA
-    ========================== */
-
-    .hero {
-      min-height: 75vh;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      padding: 60px 20px;
-
-      background:
-        linear-gradient(135deg, #f9e4e7, #fff8f5);
-    }
-
-    .hero-contenido {
-      max-width: 700px;
-      text-align: center;
-    }
-
-    .hero-pequeno {
-      color: #a65f6a;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      font-size: 13px;
-      margin-bottom: 10px;
-    }
-
-    .hero h1 {
-      font-size: 55px;
-      color: #934f5b;
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid white;
+      box-shadow: 0 5px 18px rgba(0,0,0,.12);
       margin-bottom: 15px;
-      line-height: 1.1;
     }
 
-    .hero p {
-      max-width: 550px;
-      margin: 0 auto 28px;
-      font-size: 18px;
-      color: #665858;
-    }
-
-
-    /* =========================
-       BOTONES
-    ========================== */
-
-    .btn {
-      display: inline-block;
-
-      background-color: #a65f6a;
-      color: white;
-
-      padding: 13px 25px;
-      border-radius: 30px;
-
-      text-decoration: none;
-      font-weight: bold;
-
-      transition: 0.2s;
-    }
-
-    .btn:hover {
-      background-color: #884a54;
-      transform: translateY(-2px);
-    }
-
-    .btn-whatsapp {
-      background-color: #25D366;
-    }
-
-    .btn-whatsapp:hover {
-      background-color: #1eaf55;
-    }
-
-
-    /* =========================
-       SECCIONES
-    ========================== */
-
-    section {
-      padding: 75px 7%;
-    }
-
-    .titulo-seccion {
-      text-align: center;
-      max-width: 700px;
-      margin: 0 auto 40px;
-    }
-
-    .titulo-seccion h2 {
-      color: #934f5b;
-      font-size: 34px;
+    header h1 {
+      font-size: 2.3rem;
+      color: #6c3c50;
       margin-bottom: 8px;
     }
 
-    .titulo-seccion p {
-      color: #746565;
+    header p {
+      color: #704f5d;
+      font-size: 1rem;
     }
 
+    /* NAVEGACIÓN */
 
-    /* =========================
-       PRODUCTOS
-    ========================== */
-
-    #productos {
-      background-color: white;
+    nav {
+      background: white;
+      padding: 15px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0,0,0,.07);
     }
 
-    .catalogo {
-      max-width: 1050px;
+    nav a {
+      text-decoration: none;
+      color: #8d526a;
+      font-weight: bold;
+      margin: 0 14px;
+    }
+
+    nav a:hover {
+      color: #d16f96;
+    }
+
+    /* PRESENTACIÓN */
+
+    .presentacion {
+      max-width: 900px;
       margin: auto;
+      text-align: center;
+      padding: 55px 20px 30px;
+    }
 
+    .presentacion h2 {
+      color: #824d62;
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    .presentacion p {
+      max-width: 650px;
+      margin: auto;
+      line-height: 1.7;
+      color: #69565e;
+    }
+
+    /* PRODUCTOS */
+
+    .productos {
+      max-width: 1200px;
+      margin: auto;
+      padding: 30px 20px 70px;
+    }
+
+    .productos h2 {
+      text-align: center;
+      color: #824d62;
+      font-size: 2rem;
+      margin-bottom: 35px;
+    }
+
+    .grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 25px;
     }
 
     .producto {
-      background-color: #fffafa;
-
-      border-radius: 20px;
+      background: white;
+      border-radius: 18px;
       overflow: hidden;
-
-      border: 1px solid #f1dddd;
-
-      transition: 0.2s;
+      box-shadow: 0 5px 18px rgba(0,0,0,.08);
+      transition: .25s;
+      display: flex;
+      flex-direction: column;
     }
 
     .producto:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0,0,0,.12);
     }
 
-    .foto-producto {
-      height: 280px;
+    .producto img {
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+      display: block;
+    }
 
-      background-color: #f5e8e8;
-
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      text-align: center;
+    .info {
       padding: 20px;
-
-      color: #a65f6a;
-    }
-
-    .foto-producto span {
-      font-size: 15px;
-    }
-
-    .producto-info {
-      padding: 22px;
-    }
-
-    .producto-info h3 {
-      margin-bottom: 8px;
-      color: #493d3d;
-    }
-
-    .producto-info p {
-      color: #766868;
-      margin-bottom: 18px;
-      font-size: 14px;
-    }
-
-
-    /* =========================
-       SOBRE NOSOTROS
-    ========================== */
-
-    .nosotros {
-      background-color: #f8e9e9;
-    }
-
-    .nosotros-contenido {
-      max-width: 760px;
-      margin: auto;
-      text-align: center;
-    }
-
-    .nosotros h2 {
-      font-size: 34px;
-      color: #934f5b;
-      margin-bottom: 20px;
-    }
-
-    .nosotros p {
-      color: #665858;
-      font-size: 17px;
-    }
-
-
-    /* =========================
-       CÓMO COMPRAR
-    ========================== */
-
-    .pasos {
-      max-width: 1000px;
-      margin: auto;
-
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
-    }
-
-    .paso {
-      background-color: white;
-
-      padding: 35px 25px;
-
-      border-radius: 20px;
-      text-align: center;
-
-      box-shadow: 0 4px 18px rgba(0,0,0,0.05);
-    }
-
-    .numero {
-      width: 45px;
-      height: 45px;
-
-      margin: 0 auto 15px;
-
-      background-color: #f3d9dd;
-      color: #934f5b;
-
       display: flex;
-      justify-content: center;
-      align-items: center;
-
-      border-radius: 50%;
-
-      font-weight: bold;
-      font-size: 18px;
+      flex-direction: column;
+      flex: 1;
     }
 
-    .paso h3 {
+    .info h3 {
+      color: #59404a;
+      font-size: 1.2rem;
       margin-bottom: 8px;
     }
 
-    .paso p {
-      font-size: 14px;
-      color: #746565;
+    .detalle {
+      color: #88747c;
+      font-size: .92rem;
+      margin-bottom: 12px;
     }
 
+    .precio {
+      color: #c1537e;
+      font-size: 1.45rem;
+      font-weight: bold;
+      margin-bottom: 18px;
+    }
 
-    /* =========================
-       CONTACTO
-    ========================== */
+    .boton {
+      display: block;
+      margin-top: auto;
+      background: #d8769c;
+      color: white;
+      text-decoration: none;
+      text-align: center;
+      padding: 13px;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: .2s;
+    }
+
+    .boton:hover {
+      background: #bf5e84;
+    }
+
+    /* CONTACTO */
 
     .contacto {
-      background-color: #934f5b;
-      color: white;
+      background: #f3d3df;
+      padding: 55px 20px;
       text-align: center;
-    }
-
-    .contacto-contenido {
-      max-width: 650px;
-      margin: auto;
     }
 
     .contacto h2 {
-      font-size: 36px;
+      color: #75475a;
       margin-bottom: 12px;
     }
 
     .contacto p {
       margin-bottom: 25px;
-      opacity: 0.95;
+      color: #6d5660;
     }
 
-
-    /* =========================
-       WHATSAPP FLOTANTE
-    ========================== */
-
-    .whatsapp-flotante {
-      position: fixed;
-
-      right: 20px;
-      bottom: 20px;
-
-      width: 58px;
-      height: 58px;
-
-      border-radius: 50%;
-
-      background-color: #25D366;
+    .whatsapp {
+      display: inline-block;
+      background: #25D366;
       color: white;
-
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
       text-decoration: none;
-
-      font-size: 25px;
+      padding: 15px 28px;
+      border-radius: 30px;
       font-weight: bold;
-
-      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-
-      z-index: 1000;
     }
-
-
-    /* =========================
-       PIE DE PÁGINA
-    ========================== */
 
     footer {
-      background-color: #352e2e;
-      color: #eee;
-
+      background: #6d4656;
+      color: white;
       text-align: center;
-
-      padding: 30px 20px;
-
-      font-size: 14px;
+      padding: 25px 15px;
+      font-size: .9rem;
     }
 
+    /* CELULAR */
 
-    /* =========================
-       DISEÑO PARA CELULAR
-    ========================== */
+    @media (max-width: 900px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
 
-    @media (max-width: 800px) {
-
-      header {
-        flex-direction: column;
-        gap: 12px;
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8rem;
       }
 
-      nav {
-        gap: 13px;
+      .logo {
+        width: 135px;
+        height: 135px;
       }
 
       nav a {
-        font-size: 12px;
+        margin: 0 7px;
+        font-size: .9rem;
       }
 
-      .hero {
-        min-height: 68vh;
-      }
-
-      .hero h1 {
-        font-size: 38px;
-      }
-
-      .hero p {
-        font-size: 16px;
-      }
-
-      .catalogo {
+      .grid {
         grid-template-columns: 1fr;
       }
 
-      .pasos {
-        grid-template-columns: 1fr;
+      .producto img {
+        height: auto;
+        max-height: 520px;
+        object-fit: contain;
+        background: #fafafa;
       }
 
-      section {
-        padding: 60px 6%;
+      .presentacion {
+        padding-top: 40px;
       }
-
     }
-
   </style>
-
 </head>
-
 
 <body>
 
+  <header id="inicio">
+    <img src="img/Logo.png"
+         alt="Logo Ale Ventas Alerce"
+         class="logo">
 
-<!-- =========================
-     MENÚ
-========================== -->
-
-<header>
-
-  <div class="logo">
-    Ale Ventas Alerce
-  </div>
+    <h1>Ale Ventas Alerce</h1>
+    <p>Ropa, ofertas y mucho más 💗</p>
+  </header>
 
   <nav>
     <a href="#inicio">Inicio</a>
     <a href="#productos">Productos</a>
-    <a href="#nosotros">Nosotros</a>
-    <a href="#comprar">Cómo comprar</a>
     <a href="#contacto">Contacto</a>
   </nav>
 
-</header>
-
-
-
-<!-- =========================
-     PORTADA
-========================== -->
-
-<section class="hero" id="inicio">
-
-  <div class="hero-contenido">
-
-    <div class="hero-pequeno">
-      Bienvenidos
-    </div>
-
-    <h1>
-      Ale Ventas Alerce
-    </h1>
+  <section class="presentacion">
+    <h2>Encuentra tu próximo favorito</h2>
 
     <p>
-      Ropa, accesorios y más.
-      Revisa nuestros productos y consulta directamente
-      por WhatsApp.
+      Revisa algunos de nuestros productos disponibles.
+      Si te interesa alguno, puedes consultar directamente
+      por WhatsApp para conocer disponibilidad, tallas y más información.
+    </p>
+  </section>
+
+  <main class="productos" id="productos">
+
+    <h2>Productos</h2>
+
+    <div class="grid">
+
+      <!-- JEANS NEGRO -->
+
+      <article class="producto">
+        <img src="img/Jeans_negro.png"
+             alt="Jeans negro elasticado">
+
+        <div class="info">
+          <h3>Jeans elasticado</h3>
+          <p class="precio">$16.000 c/u</p>
+
+          <a class="boton"
+             href="https://wa.me/56950446613?text=Hola%2C%20me%20interesa%20el%20jeans%20elasticado%20de%20%2416.000."
+             target="_blank">
+             Consultar por WhatsApp
+          </a>
+        </div>
+      </article>
+
+
+      <!-- CONJUNTO POLAR -->
+
+      <article class="producto">
+        <img src="img/conjunto_polar.png"
+             alt="Conjunto polar">
+
+        <div class="info">
+          <h3>Conjunto polar</h3>
+          <p class="precio">$8.000</p>
+
+          <a class="boton"
+             href="https://wa.me/56950446613?text=Hola%2C%20me%20interesa%20el%20conjunto%20polar%20de%20%248.000."
+             target="_blank">
+             Consultar por WhatsApp
+          </a>
+        </div>
+      </article>
+
+
+      <!-- PANTY -->
+
+      <article class="producto">
+        <img src="img/panty_piel.png"
+             alt="Panty efecto piel">
+
+        <div class="info">
+          <h3>Panty efecto piel</h3>
+          <p class="precio">$8.000</p>
+
+          <a class="boton"
+             href="https://wa.me/56950446613?text=Hola%2C%20me%20interesa%20la%20panty%20efecto%20piel%20de%20%248.000."
+             target="_blank">
+             Consultar por WhatsApp
+          </a>
+        </div>
+      </article>
+
+
+      <!-- COTELÉ -->
+
+      <article class="producto">
+        <img src="img/Cotele_pantalón.png"
+             alt="Pantalón de cotelé">
+
+        <div class="info">
+          <h3>Pantalón de cotelé</h3>
+          <p class="detalle">Sin chiporro</p>
+          <p class="precio">$5.000</p>
+
+          <a class="boton"
+             href="https://wa.me/56950446613?text=Hola%2C%20me%20interesa%20el%20pantal%C3%B3n%20de%20cotel%C3%A9%20de%20%245.000."
+             target="_blank">
+             Consultar por WhatsApp
+          </a>
+        </div>
+      </article>
+
+
+      <!-- BUZO -->
+
+      <article class="producto">
+        <img src="img/buzo_rosa.png"
+             alt="Buzo de dama con chiporro">
+
+        <div class="info">
+          <h3>Buzo de dama con chiporro</h3>
+          <p class="detalle">Talla única</p>
+          <p class="precio">$6.000 c/u</p>
+
+          <a class="boton"
+             href="https://wa.me/56950446613?text=Hola%2C%20me%20interesa%20el%20buzo%20de%20dama%20con%20chiporro%20de%20%246.000."
+             target="_blank">
+             Consultar por WhatsApp
+          </a>
+        </div>
+      </article>
+
+
+      <!-- TALLAS 42 A 52 -->
+
+      <article class="producto">
+        <img src="img/jeans_azules_grandes.png"
+             alt="Jeans talla 42 a 52">
+
+        <div class="info">
+          <h3>Jeans tallas 42 a 52</h3>
+          <p class="detalle">Tallas 42 hasta 52</p>
+          <p class="precio">$19.000 c/u</p>
+
+          <a class="boton"
+             href="https://wa.me/56950446613?text=Hola%2C%20me%20interesa%20el%20jeans%20de%20talla%2042%20a%2052%20de%20%2419.000."
+             target="_blank">
+             Consultar por WhatsApp
+          </a>
+        </div>
+      </article>
+
+
+      <!-- FLARE CARGO -->
+
+      <article class="producto">
+        <img src="img/Flare_cargo.png"
+             alt="Jeans flare cargo">
+
+        <div class="info">
+          <h3>Flare cargo</h3>
+          <p class="precio">$20.000</p>
+
+          <a class="boton"
+             href="https://wa.me/56950446613?text=Hola%2C%20me%20interesa%20el%20flare%20cargo%20de%20%2420.000."
+             target="_blank">
+             Consultar por WhatsApp
+          </a>
+        </div>
+      </article>
+
+
+      <!-- JEANS FLARE -->
+
+      <article class="producto">
+        <img src="img/jeans_flare_azul.png"
+             alt="Jeans flare azul">
+
+        <div class="info">
+          <h3>Jeans flare azul</h3>
+          <p class="precio">$15.000</p>
+
+          <a class="boton"
+             href="https://wa.me/56950446613?text=Hola%2C%20me%20interesa%20el%20jeans%20flare%20azul%20de%20%2415.000."
+             target="_blank">
+             Consultar por WhatsApp
+          </a>
+        </div>
+      </article>
+
+
+      <!-- JEANS AZUL CLARO -->
+
+      <article class="producto">
+        <img src="img/jeans_azul_claro.png"
+             alt="Jeans azul claro">
+
+        <div class="info">
+          <h3>Jeans azul claro</h3>
+          <p class="precio">$15.000</p>
+
+          <a class="boton"
+             href="https://wa.me/56950446613?text=Hola%2C%20me%20interesa%20el%20jeans%20azul%20claro%20de%20%2415.000."
+             target="_blank">
+             Consultar por WhatsApp
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+
+  <section class="contacto" id="contacto">
+
+    <h2>¿Te gustó algún producto?</h2>
+
+    <p>
+      Consulta disponibilidad directamente con Ale Ventas Alerce.
     </p>
 
-    <a
-      class="btn"
-      href="#productos">
-      Ver productos
+    <a class="whatsapp"
+       href="https://wa.me/56950446613?text=Hola%2C%20vi%20su%20p%C3%A1gina%20de%20Ale%20Ventas%20Alerce%20y%20quiero%20consultar%20por%20un%20producto."
+       target="_blank">
+       Hablar por WhatsApp
     </a>
 
-  </div>
+  </section>
 
-</section>
 
-
-
-<!-- =========================
-     PRODUCTOS
-========================== -->
-
-<section id="productos">
-
-  <div class="titulo-seccion">
-
-    <h2>
-      Nuestros productos
-    </h2>
-
-    <p>
-      Aquí podrás encontrar los productos disponibles
-      de Ale Ventas Alerce.
-    </p>
-
-  </div>
-
-
-  <div class="catalogo">
-
-
-    <!-- PRODUCTO 1 -->
-
-    <article class="producto">
-
-      <div class="foto-producto">
-        <span>
-          Aquí puedes agregar una foto del producto
-        </span>
-      </div>
-
-      <div class="producto-info">
-
-        <h3>
-          Producto
-        </h3>
-
-        <p>
-          Consulta disponibilidad y detalles directamente
-          por WhatsApp.
-        </p>
-
-        <a
-          class="btn"
-          target="_blank"
-          href="https://wa.me/56950446613?text=Hola%20Ale%20Ventas%20Alerce%2C%20quisiera%20consultar%20por%20uno%20de%20sus%20productos.">
-          Consultar
-        </a>
-
-      </div>
-
-    </article>
-
-
-
-    <!-- PRODUCTO 2 -->
-
-    <article class="producto">
-
-      <div class="foto-producto">
-        <span>
-          Aquí puedes agregar una foto del producto
-        </span>
-      </div>
-
-      <div class="producto-info">
-
-        <h3>
-          Producto
-        </h3>
-
-        <p>
-          Consulta disponibilidad y detalles directamente
-          por WhatsApp.
-        </p>
-
-        <a
-          class="btn"
-          target="_blank"
-          href="https://wa.me/56950446613?text=Hola%20Ale%20Ventas%20Alerce%2C%20quisiera%20consultar%20por%20uno%20de%20sus%20productos.">
-          Consultar
-        </a>
-
-      </div>
-
-    </article>
-
-
-
-    <!-- PRODUCTO 3 -->
-
-    <article class="producto">
-
-      <div class="foto-producto">
-        <span>
-          Aquí puedes agregar una foto del producto
-        </span>
-      </div>
-
-      <div class="producto-info">
-
-        <h3>
-          Producto
-        </h3>
-
-        <p>
-          Consulta disponibilidad y detalles directamente
-          por WhatsApp.
-        </p>
-
-        <a
-          class="btn"
-          target="_blank"
-          href="https://wa.me/56950446613?text=Hola%20Ale%20Ventas%20Alerce%2C%20quisiera%20consultar%20por%20uno%20de%20sus%20productos.">
-          Consultar
-        </a>
-
-      </div>
-
-    </article>
-
-
-  </div>
-
-</section>
-
-
-
-<!-- =========================
-     SOBRE NOSOTROS
-========================== -->
-
-<section class="nosotros" id="nosotros">
-
-  <div class="nosotros-contenido">
-
-    <h2>
-      Ale Ventas Alerce
-    </h2>
-
-    <p>
-      Un espacio dedicado a la venta de ropa,
-      accesorios y otros productos.
-      Puedes revisar las novedades disponibles
-      y comunicarte directamente para realizar
-      tus consultas.
-    </p>
-
-  </div>
-
-</section>
-
-
-
-<!-- =========================
-     CÓMO COMPRAR
-========================== -->
-
-<section id="comprar">
-
-  <div class="titulo-seccion">
-
-    <h2>
-      ¿Cómo comprar?
-    </h2>
-
-    <p>
-      Consulta fácilmente por los productos que te interesen.
-    </p>
-
-  </div>
-
-
-  <div class="pasos">
-
-
-    <div class="paso">
-
-      <div class="numero">
-        1
-      </div>
-
-      <h3>
-        Revisa
-      </h3>
-
-      <p>
-        Mira los productos publicados en nuestra página.
-      </p>
-
-    </div>
-
-
-    <div class="paso">
-
-      <div class="numero">
-        2
-      </div>
-
-      <h3>
-        Consulta
-      </h3>
-
-      <p>
-        Escríbenos por WhatsApp para consultar
-        disponibilidad y detalles.
-      </p>
-
-    </div>
-
-
-    <div class="paso">
-
-      <div class="numero">
-        3
-      </div>
-
-      <h3>
-        Coordina
-      </h3>
-
-      <p>
-        Coordina directamente los detalles de tu compra.
-      </p>
-
-    </div>
-
-
-  </div>
-
-</section>
-
-
-
-<!-- =========================
-     CONTACTO
-========================== -->
-
-<section class="contacto" id="contacto">
-
-  <div class="contacto-contenido">
-
-    <h2>
-      Contáctanos
-    </h2>
-
-    <p>
-      ¿Quieres consultar por algún producto?
-      Escríbenos directamente por WhatsApp.
-    </p>
-
-    <a
-      class="btn btn-whatsapp"
-      target="_blank"
-      href="https://wa.me/56950446613?text=Hola%20Ale%20Ventas%20Alerce%2C%20vi%20su%20página%20y%20quisiera%20hacer%20una%20consulta.">
-
-      Hablar por WhatsApp
-
-    </a>
-
-  </div>
-
-</section>
-
-
-
-<!-- =========================
-     PIE DE PÁGINA
-========================== -->
-
-<footer>
-
-  <p>
-    © 2026 Ale Ventas Alerce
-  </p>
-
-</footer>
-
-
-
-<!-- BOTÓN FLOTANTE DE WHATSAPP -->
-
-<a
-  class="whatsapp-flotante"
-  target="_blank"
-  aria-label="Contactar por WhatsApp"
-  href="https://wa.me/56950446613?text=Hola%20Ale%20Ventas%20Alerce%2C%20vi%20su%20página%20y%20quisiera%20hacer%20una%20consulta.">
-
-  ☎
-
-</a>
-
+  <footer>
+    <p>© 2026 Ale Ventas Alerce</p>
+    <p>Puerto Montt, Chile</p>
+  </footer>
 
 </body>
-
 </html>
