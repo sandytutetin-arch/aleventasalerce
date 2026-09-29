@@ -350,7 +350,7 @@ Hablar por WhatsApp
 
 </footer>
 
-
+<script src="inventario.js"></script>
 <script>
 
 /*
@@ -372,81 +372,6 @@ Formato:
 
 */
 
-const inventario = [
-
-{
-nombre:"Jeans elasticado",
-categoria:"Ropa dama",
-precio:16000,
-stock:1,
-detalle:"Consultar tallas disponibles"
-},
-
-{
-nombre:"Conjunto polar",
-categoria:"Ropa dama",
-precio:8000,
-stock:1,
-detalle:"Consultar colores y disponibilidad"
-},
-
-{
-nombre:"Panty efecto piel",
-categoria:"Lencería",
-precio:8000,
-stock:1,
-detalle:"Consultar disponibilidad"
-},
-
-{
-nombre:"Pantalón cotelé",
-categoria:"Ropa dama",
-precio:5000,
-stock:1,
-detalle:"Sin chiporro"
-},
-
-{
-nombre:"Buzo dama con chiporro",
-categoria:"Ropa dama",
-precio:6000,
-stock:1,
-detalle:"Talla única"
-},
-
-{
-nombre:"Jeans talla especial",
-categoria:"Ropa dama",
-precio:19000,
-stock:1,
-detalle:"Tallas 42 hasta 52"
-},
-
-{
-nombre:"Flare cargo",
-categoria:"Ropa dama",
-precio:20000,
-stock:1,
-detalle:"Consultar tallas disponibles"
-},
-
-{
-nombre:"Jeans flare azul",
-categoria:"Ropa dama",
-precio:15000,
-stock:1,
-detalle:"Consultar tallas disponibles"
-},
-
-{
-nombre:"Jeans azul claro",
-categoria:"Ropa dama",
-precio:15000,
-stock:1,
-detalle:"Consultar tallas disponibles"
-}
-
-];
 
 
 /* NO TOCAR DESDE AQUÍ */
@@ -518,7 +443,7 @@ producto.nombre
 
 ||
 
-producto.detalle
+producto.notas
 .toLowerCase()
 .includes(texto);
 
@@ -609,7 +534,7 @@ Stock: ${producto.stock}
 </div>
 
 <div class="detalle">
-${producto.detalle}
+${producto.notas}
 </div>
 
 <a
