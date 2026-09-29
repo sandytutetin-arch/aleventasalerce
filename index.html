@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Ale Ventas Alerce | Ropa y más</title>
+  <title>Ale Ventas Alerce</title>
 
-  <meta name="description"
-        content="Ale Ventas Alerce - Ropa, accesorios y productos seleccionados en Alerce, Puerto Montt. Consulta disponibilidad por WhatsApp.">
+  <meta
+    name="description"
+    content="Ale Ventas Alerce. Ropa, accesorios y más. Consulta nuestros productos disponibles por WhatsApp."
+  >
 
   <style>
+
+    /* =========================
+       CONFIGURACIÓN GENERAL
+    ========================== */
+
     * {
       margin: 0;
       padding: 0;
@@ -22,266 +30,381 @@
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background: #fffaf8;
-      color: #3e3432;
+      background-color: #fffafa;
+      color: #403838;
       line-height: 1.6;
     }
 
-    /* ---------- HEADER ---------- */
+
+    /* =========================
+       MENÚ
+    ========================== */
 
     header {
-      background: #ffffff;
+      background-color: white;
       padding: 18px 7%;
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
+
       position: sticky;
       top: 0;
       z-index: 1000;
-      box-shadow: 0 2px 12px rgba(0,0,0,.07);
+
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
     }
 
     .logo {
       font-size: 23px;
       font-weight: bold;
-      color: #a85f67;
+      color: #a65f6a;
     }
 
     nav {
       display: flex;
-      gap: 20px;
+      gap: 22px;
     }
 
     nav a {
+      color: #403838;
       text-decoration: none;
-      color: #4c3b3b;
-      font-weight: bold;
       font-size: 14px;
+      font-weight: bold;
     }
 
     nav a:hover {
-      color: #a85f67;
+      color: #a65f6a;
     }
 
-    /* ---------- PORTADA ---------- */
+
+    /* =========================
+       PORTADA
+    ========================== */
 
     .hero {
-      min-height: 78vh;
+      min-height: 75vh;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 60px 20px;
+
       background:
-        linear-gradient(rgba(75,50,50,.25), rgba(75,50,50,.25)),
-        url("https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1600&q=80")
-        center/cover;
+        linear-gradient(135deg, #f9e4e7, #fff8f5);
+    }
+
+    .hero-contenido {
+      max-width: 700px;
+      text-align: center;
+    }
+
+    .hero-pequeno {
+      color: #a65f6a;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+
+    .hero h1 {
+      font-size: 55px;
+      color: #934f5b;
+      margin-bottom: 15px;
+      line-height: 1.1;
+    }
+
+    .hero p {
+      max-width: 550px;
+      margin: 0 auto 28px;
+      font-size: 18px;
+      color: #665858;
+    }
+
+
+    /* =========================
+       BOTONES
+    ========================== */
+
+    .btn {
+      display: inline-block;
+
+      background-color: #a65f6a;
+      color: white;
+
+      padding: 13px 25px;
+      border-radius: 30px;
+
+      text-decoration: none;
+      font-weight: bold;
+
+      transition: 0.2s;
+    }
+
+    .btn:hover {
+      background-color: #884a54;
+      transform: translateY(-2px);
+    }
+
+    .btn-whatsapp {
+      background-color: #25D366;
+    }
+
+    .btn-whatsapp:hover {
+      background-color: #1eaf55;
+    }
+
+
+    /* =========================
+       SECCIONES
+    ========================== */
+
+    section {
+      padding: 75px 7%;
+    }
+
+    .titulo-seccion {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 40px;
+    }
+
+    .titulo-seccion h2 {
+      color: #934f5b;
+      font-size: 34px;
+      margin-bottom: 8px;
+    }
+
+    .titulo-seccion p {
+      color: #746565;
+    }
+
+
+    /* =========================
+       PRODUCTOS
+    ========================== */
+
+    #productos {
+      background-color: white;
+    }
+
+    .catalogo {
+      max-width: 1050px;
+      margin: auto;
+
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .producto {
+      background-color: #fffafa;
+
+      border-radius: 20px;
+      overflow: hidden;
+
+      border: 1px solid #f1dddd;
+
+      transition: 0.2s;
+    }
+
+    .producto:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+    }
+
+    .foto-producto {
+      height: 280px;
+
+      background-color: #f5e8e8;
 
       display: flex;
       justify-content: center;
       align-items: center;
+
       text-align: center;
-      padding: 30px;
+      padding: 20px;
+
+      color: #a65f6a;
     }
 
-    .hero-content {
-      background: rgba(255,255,255,.91);
-      max-width: 650px;
-      padding: 45px 30px;
-      border-radius: 25px;
-    }
-
-    .hero h1 {
-      font-size: 45px;
-      color: #9d5961;
-      margin-bottom: 10px;
-    }
-
-    .hero p {
-      font-size: 18px;
-      margin-bottom: 25px;
-    }
-
-    .btn {
-      display: inline-block;
-      background: #a85f67;
-      color: white;
-      text-decoration: none;
-      padding: 13px 25px;
-      border-radius: 30px;
-      font-weight: bold;
-      transition: .2s;
-    }
-
-    .btn:hover {
-      background: #84464d;
-      transform: translateY(-2px);
-    }
-
-    /* ---------- SECCIONES ---------- */
-
-    section {
-      padding: 70px 7%;
-    }
-
-    .titulo {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-    .titulo h2 {
-      color: #9d5961;
-      font-size: 32px;
-      margin-bottom: 8px;
-    }
-
-    .titulo p {
-      color: #776766;
-    }
-
-    /* ---------- PRODUCTOS ---------- */
-
-    .productos {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    .producto {
-      background: white;
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0 5px 20px rgba(0,0,0,.08);
-      transition: .25s;
-    }
-
-    .producto:hover {
-      transform: translateY(-5px);
-    }
-
-    .producto img {
-      width: 100%;
-      height: 300px;
-      object-fit: cover;
+    .foto-producto span {
+      font-size: 15px;
     }
 
     .producto-info {
       padding: 22px;
     }
 
-    .producto h3 {
-      margin-bottom: 6px;
+    .producto-info h3 {
+      margin-bottom: 8px;
+      color: #493d3d;
     }
 
-    .precio {
-      color: #a85f67;
-      font-size: 21px;
-      font-weight: bold;
-      margin: 8px 0 15px;
-    }
-
-    .producto .btn {
+    .producto-info p {
+      color: #766868;
+      margin-bottom: 18px;
       font-size: 14px;
-      padding: 10px 17px;
     }
 
-    /* ---------- NOSOTROS ---------- */
+
+    /* =========================
+       SOBRE NOSOTROS
+    ========================== */
 
     .nosotros {
-      background: #f5e7e3;
+      background-color: #f8e9e9;
     }
 
     .nosotros-contenido {
-      max-width: 800px;
+      max-width: 760px;
       margin: auto;
       text-align: center;
     }
 
     .nosotros h2 {
-      color: #9d5961;
-      font-size: 32px;
+      font-size: 34px;
+      color: #934f5b;
       margin-bottom: 20px;
     }
 
-    /* ---------- INFO ---------- */
+    .nosotros p {
+      color: #665858;
+      font-size: 17px;
+    }
 
-    .beneficios {
+
+    /* =========================
+       CÓMO COMPRAR
+    ========================== */
+
+    .pasos {
+      max-width: 1000px;
+      margin: auto;
+
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 25px;
-      max-width: 1000px;
-      margin: auto;
     }
 
-    .beneficio {
+    .paso {
+      background-color: white;
+
+      padding: 35px 25px;
+
+      border-radius: 20px;
       text-align: center;
-      background: white;
-      padding: 30px 20px;
-      border-radius: 18px;
-      box-shadow: 0 4px 15px rgba(0,0,0,.06);
+
+      box-shadow: 0 4px 18px rgba(0,0,0,0.05);
     }
 
-    .beneficio .icono {
-      font-size: 35px;
-      margin-bottom: 10px;
-    }
+    .numero {
+      width: 45px;
+      height: 45px;
 
-    /* ---------- CONTACTO ---------- */
+      margin: 0 auto 15px;
 
-    .contacto {
-      text-align: center;
-      background: #fff;
-    }
+      background-color: #f3d9dd;
+      color: #934f5b;
 
-    .contacto h2 {
-      color: #9d5961;
-      font-size: 32px;
-      margin-bottom: 10px;
-    }
-
-    .contacto p {
-      margin-bottom: 22px;
-    }
-
-    .whatsapp {
-      background: #25D366;
-    }
-
-    .whatsapp:hover {
-      background: #1eae54;
-    }
-
-    /* ---------- BOTÓN FLOTANTE ---------- */
-
-    .whatsapp-flotante {
-      position: fixed;
-      right: 20px;
-      bottom: 20px;
-      background: #25D366;
-      color: white;
-      text-decoration: none;
-      width: 58px;
-      height: 58px;
-      border-radius: 50%;
       display: flex;
       justify-content: center;
       align-items: center;
-      font-size: 28px;
-      box-shadow: 0 4px 15px rgba(0,0,0,.25);
+
+      border-radius: 50%;
+
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .paso h3 {
+      margin-bottom: 8px;
+    }
+
+    .paso p {
+      font-size: 14px;
+      color: #746565;
+    }
+
+
+    /* =========================
+       CONTACTO
+    ========================== */
+
+    .contacto {
+      background-color: #934f5b;
+      color: white;
+      text-align: center;
+    }
+
+    .contacto-contenido {
+      max-width: 650px;
+      margin: auto;
+    }
+
+    .contacto h2 {
+      font-size: 36px;
+      margin-bottom: 12px;
+    }
+
+    .contacto p {
+      margin-bottom: 25px;
+      opacity: 0.95;
+    }
+
+
+    /* =========================
+       WHATSAPP FLOTANTE
+    ========================== */
+
+    .whatsapp-flotante {
+      position: fixed;
+
+      right: 20px;
+      bottom: 20px;
+
+      width: 58px;
+      height: 58px;
+
+      border-radius: 50%;
+
+      background-color: #25D366;
+      color: white;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      text-decoration: none;
+
+      font-size: 25px;
+      font-weight: bold;
+
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+
       z-index: 1000;
     }
 
-    /* ---------- FOOTER ---------- */
+
+    /* =========================
+       PIE DE PÁGINA
+    ========================== */
 
     footer {
-      background: #3e3432;
-      color: white;
-      text-align: center;
-      padding: 28px 15px;
-    }
+      background-color: #352e2e;
+      color: #eee;
 
-    footer p {
+      text-align: center;
+
+      padding: 30px 20px;
+
       font-size: 14px;
     }
 
-    /* ---------- CELULAR ---------- */
+
+    /* =========================
+       DISEÑO PARA CELULAR
+    ========================== */
 
     @media (max-width: 800px) {
 
@@ -291,68 +414,94 @@
       }
 
       nav {
-        gap: 12px;
+        gap: 13px;
       }
 
       nav a {
-        font-size: 13px;
+        font-size: 12px;
       }
 
       .hero {
-        min-height: 70vh;
+        min-height: 68vh;
       }
 
       .hero h1 {
-        font-size: 34px;
+        font-size: 38px;
       }
 
-      .productos {
+      .hero p {
+        font-size: 16px;
+      }
+
+      .catalogo {
         grid-template-columns: 1fr;
       }
 
-      .beneficios {
+      .pasos {
         grid-template-columns: 1fr;
       }
 
-      .producto img {
-        height: 330px;
+      section {
+        padding: 60px 6%;
       }
+
     }
+
   </style>
+
 </head>
 
 
 <body>
 
-<!-- MENÚ -->
+
+<!-- =========================
+     MENÚ
+========================== -->
 
 <header>
-  <div class="logo">Ale Ventas Alerce ♡</div>
+
+  <div class="logo">
+    Ale Ventas Alerce
+  </div>
 
   <nav>
     <a href="#inicio">Inicio</a>
     <a href="#productos">Productos</a>
     <a href="#nosotros">Nosotros</a>
+    <a href="#comprar">Cómo comprar</a>
     <a href="#contacto">Contacto</a>
   </nav>
+
 </header>
 
 
-<!-- PORTADA -->
+
+<!-- =========================
+     PORTADA
+========================== -->
 
 <section class="hero" id="inicio">
 
-  <div class="hero-content">
+  <div class="hero-contenido">
 
-    <h1>Ale Ventas Alerce</h1>
+    <div class="hero-pequeno">
+      Bienvenidos
+    </div>
+
+    <h1>
+      Ale Ventas Alerce
+    </h1>
 
     <p>
-      Ropa, accesorios y mucho más ♡
-      Encuentra productos lindos a precios accesibles
-      y consulta disponibilidad directamente por WhatsApp.
+      Ropa, accesorios y más.
+      Revisa nuestros productos y consulta directamente
+      por WhatsApp.
     </p>
 
-    <a class="btn" href="#productos">
+    <a
+      class="btn"
+      href="#productos">
       Ver productos
     </a>
 
@@ -361,113 +510,129 @@
 </section>
 
 
-<!-- PRODUCTOS -->
+
+<!-- =========================
+     PRODUCTOS
+========================== -->
 
 <section id="productos">
 
-  <div class="titulo">
-    <h2>Productos destacados</h2>
-    <p>Conoce algunos de nuestros productos disponibles.</p>
+  <div class="titulo-seccion">
+
+    <h2>
+      Nuestros productos
+    </h2>
+
+    <p>
+      Aquí podrás encontrar los productos disponibles
+      de Ale Ventas Alerce.
+    </p>
+
   </div>
 
 
-  <div class="productos">
+  <div class="catalogo">
 
 
     <!-- PRODUCTO 1 -->
 
-    <div class="producto">
+    <article class="producto">
 
-      <img
-        src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80"
-        alt="Polera">
+      <div class="foto-producto">
+        <span>
+          Aquí puedes agregar una foto del producto
+        </span>
+      </div>
 
       <div class="producto-info">
 
-        <h3>Polera</h3>
+        <h3>
+          Producto
+        </h3>
 
         <p>
-          Cómoda y perfecta para combinar con distintos outfits.
+          Consulta disponibilidad y detalles directamente
+          por WhatsApp.
         </p>
-
-        <div class="precio">$9.990</div>
 
         <a
           class="btn"
           target="_blank"
-          href="https://wa.me/56950446613?text=Hola%20Ale%20Ventas%20Alerce%2C%20quisiera%20consultar%20por%20la%20polera.">
-
+          href="https://wa.me/56950446613?text=Hola%20Ale%20Ventas%20Alerce%2C%20quisiera%20consultar%20por%20uno%20de%20sus%20productos.">
           Consultar
-
         </a>
 
       </div>
 
-    </div>
+    </article>
+
 
 
     <!-- PRODUCTO 2 -->
 
-    <div class="producto">
+    <article class="producto">
 
-      <img
-        src="https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=800&q=80"
-        alt="Jeans">
+      <div class="foto-producto">
+        <span>
+          Aquí puedes agregar una foto del producto
+        </span>
+      </div>
 
       <div class="producto-info">
 
-        <h3>Jeans</h3>
+        <h3>
+          Producto
+        </h3>
 
         <p>
-          Un básico para complementar tu clóset.
+          Consulta disponibilidad y detalles directamente
+          por WhatsApp.
         </p>
-
-        <div class="precio">$14.990</div>
 
         <a
           class="btn"
           target="_blank"
-          href="https://wa.me/56950446613?text=Hola%20Ale%20Ventas%20Alerce%2C%20quisiera%20consultar%20por%20los%20jeans.">
-
+          href="https://wa.me/56950446613?text=Hola%20Ale%20Ventas%20Alerce%2C%20quisiera%20consultar%20por%20uno%20de%20sus%20productos.">
           Consultar
-
         </a>
 
       </div>
 
-    </div>
+    </article>
+
 
 
     <!-- PRODUCTO 3 -->
 
-    <div class="producto">
+    <article class="producto">
 
-      <img
-        src="https://images.unsplash.com/photo-1591561954557-26941169b49e?auto=format&fit=crop&w=800&q=80"
-        alt="Accesorios">
+      <div class="foto-producto">
+        <span>
+          Aquí puedes agregar una foto del producto
+        </span>
+      </div>
 
       <div class="producto-info">
 
-        <h3>Accesorios</h3>
+        <h3>
+          Producto
+        </h3>
 
         <p>
-          Detalles para complementar tus looks favoritos.
+          Consulta disponibilidad y detalles directamente
+          por WhatsApp.
         </p>
-
-        <div class="precio">Desde $3.990</div>
 
         <a
           class="btn"
           target="_blank"
-          href="https://wa.me/56950446613?text=Hola%20Ale%20Ventas%20Alerce%2C%20quisiera%20ver%20los%20accesorios%20disponibles.">
-
+          href="https://wa.me/56950446613?text=Hola%20Ale%20Ventas%20Alerce%2C%20quisiera%20consultar%20por%20uno%20de%20sus%20productos.">
           Consultar
-
         </a>
 
       </div>
 
-    </div>
+    </article>
 
 
   </div>
@@ -475,27 +640,25 @@
 </section>
 
 
-<!-- SOBRE LA TIENDA -->
+
+<!-- =========================
+     SOBRE NOSOTROS
+========================== -->
 
 <section class="nosotros" id="nosotros">
 
   <div class="nosotros-contenido">
 
-    <h2>Sobre Ale Ventas Alerce</h2>
+    <h2>
+      Ale Ventas Alerce
+    </h2>
 
     <p>
-      Somos un emprendimiento ubicado en Alerce dedicado a la
-      venta de ropa, accesorios y distintos productos.
-      Buscamos ofrecer alternativas bonitas, accesibles y
-      una atención cercana para nuestros clientes.
-    </p>
-
-    <br>
-
-    <p>
-      Si te interesa algún producto puedes consultar
-      disponibilidad, tallas, colores y formas de entrega
-      directamente por WhatsApp.
+      Un espacio dedicado a la venta de ropa,
+      accesorios y otros productos.
+      Puedes revisar las novedades disponibles
+      y comunicarte directamente para realizar
+      tus consultas.
     </p>
 
   </div>
@@ -503,94 +666,146 @@
 </section>
 
 
-<!-- BENEFICIOS -->
 
-<section>
+<!-- =========================
+     CÓMO COMPRAR
+========================== -->
 
-  <div class="titulo">
+<section id="comprar">
 
-    <h2>Compra fácil</h2>
+  <div class="titulo-seccion">
+
+    <h2>
+      ¿Cómo comprar?
+    </h2>
 
     <p>
-      Consulta directamente antes de realizar tu compra.
+      Consulta fácilmente por los productos que te interesen.
     </p>
 
   </div>
 
 
-  <div class="beneficios">
+  <div class="pasos">
 
-    <div class="beneficio">
-      <div class="icono">♡</div>
-      <h3>Variedad</h3>
-      <p>Ropa, accesorios y diferentes productos.</p>
+
+    <div class="paso">
+
+      <div class="numero">
+        1
+      </div>
+
+      <h3>
+        Revisa
+      </h3>
+
+      <p>
+        Mira los productos publicados en nuestra página.
+      </p>
+
     </div>
 
 
-    <div class="beneficio">
-      <div class="icono">⌂</div>
-      <h3>Alerce</h3>
-      <p>Emprendimiento local de Alerce, Puerto Montt.</p>
+    <div class="paso">
+
+      <div class="numero">
+        2
+      </div>
+
+      <h3>
+        Consulta
+      </h3>
+
+      <p>
+        Escríbenos por WhatsApp para consultar
+        disponibilidad y detalles.
+      </p>
+
     </div>
 
 
-    <div class="beneficio">
-      <div class="icono">✆</div>
-      <h3>Atención directa</h3>
-      <p>Consulta rápidamente a través de WhatsApp.</p>
+    <div class="paso">
+
+      <div class="numero">
+        3
+      </div>
+
+      <h3>
+        Coordina
+      </h3>
+
+      <p>
+        Coordina directamente los detalles de tu compra.
+      </p>
+
     </div>
+
 
   </div>
 
 </section>
 
 
-<!-- CONTACTO -->
+
+<!-- =========================
+     CONTACTO
+========================== -->
 
 <section class="contacto" id="contacto">
 
-  <h2>¿Te gustó algo?</h2>
+  <div class="contacto-contenido">
 
-  <p>
-    Escríbenos para consultar disponibilidad,
-    tallas, precios o coordinar tu compra.
-  </p>
+    <h2>
+      Contáctanos
+    </h2>
 
-  <a
-    class="btn whatsapp"
-    target="_blank"
-    href="https://wa.me/56950446613?text=Hola%20Ale%20Ventas%20Alerce%2C%20vi%20su%20página%20y%20quisiera%20hacer%20una%20consulta.">
+    <p>
+      ¿Quieres consultar por algún producto?
+      Escríbenos directamente por WhatsApp.
+    </p>
 
-    Hablar por WhatsApp
+    <a
+      class="btn btn-whatsapp"
+      target="_blank"
+      href="https://wa.me/56950446613?text=Hola%20Ale%20Ventas%20Alerce%2C%20vi%20su%20página%20y%20quisiera%20hacer%20una%20consulta.">
 
-  </a>
+      Hablar por WhatsApp
+
+    </a>
+
+  </div>
 
 </section>
 
 
-<!-- FOOTER -->
+
+<!-- =========================
+     PIE DE PÁGINA
+========================== -->
 
 <footer>
 
-  <p>© 2026 Ale Ventas Alerce</p>
-
-  <p>Ropa, accesorios y más ♡</p>
+  <p>
+    © 2026 Ale Ventas Alerce
+  </p>
 
 </footer>
 
 
-<!-- WHATSAPP FLOTANTE -->
+
+<!-- BOTÓN FLOTANTE DE WHATSAPP -->
 
 <a
   class="whatsapp-flotante"
   target="_blank"
-  aria-label="WhatsApp"
+  aria-label="Contactar por WhatsApp"
   href="https://wa.me/56950446613?text=Hola%20Ale%20Ventas%20Alerce%2C%20vi%20su%20página%20y%20quisiera%20hacer%20una%20consulta.">
 
-  ✆
+  ☎
 
 </a>
 
 
 </body>
+
 </html>
