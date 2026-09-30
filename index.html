@@ -524,9 +524,9 @@ formatoPrecio(producto.precio) +
 contenedor.innerHTML += `
 
 <article class="producto">
-${fotosProductos[producto.codigo] ? `
+${fotosProductos[producto.nombre] ? `
 <img
-    src="${fotosProductos[producto.codigo]}"
+    src="${fotosProductos[producto.nombre]}"
     alt="${producto.nombre}"
     class="foto-producto"
     loading="lazy"
