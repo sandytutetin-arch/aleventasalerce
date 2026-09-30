@@ -358,6 +358,7 @@ Hablar por WhatsApp
 </footer>
 
 <script src="inventario.js"></script>
+<script src="fotos-productos.js"></script>
     <script src="fotos-productos.js"></script>
 <script>
 
@@ -478,60 +479,42 @@ resultados.length +
 
 contenedor.innerHTML = "";
 
-
-if(resultados.length === 0){
-
-contenedor.innerHTML =
-`
-<div style="
-grid-column:1/-1;
-background:white;
-padding:30px;
-text-align:center;
-border-radius:15px;
-">
-
-No encontramos productos con esa búsqueda.
-
-</div>
-`;
-
-return;
-
-}
-
-
 resultados.forEach(producto => {
 
-
-const mensaje =
-
-encodeURIComponent(
-
-"Hola, me interesa " +
-
+const mensaje = encodeURIComponent(
+"Hola, quisiera consultar por " +
 producto.nombre +
-
-" de " +
-
-formatoPrecio(producto.precio) +
-
 ". ¿Está disponible?"
-
 );
+
 
 
 contenedor.innerHTML += `
 
 <article class="producto">
-${fotosProductos[producto.nombre] ? `
-<img
-    src="${fotosProductos[producto.nombre]}"
-    alt="${producto.nombre}"
-    class="foto-producto"
-    loading="lazy"
->
-` : ""}
+
+${(() => {
+    const foto = obtenerFotoProducto(producto);
+
+    if (!foto) return "";
+
+    return `
+        <div class="contenedor-foto">
+            <img
+                src="${foto.ruta}"
+                alt="${producto.nombre}"
+                class="foto-producto"
+                loading="lazy"
+            >
+            ${!foto.exacta ? `
+                <span class="foto-referencial">
+                    Foto referencial
+                </span>
+            ` : ""}
+        </div>
+    `;
+})()}
+
 <div class="categoria">
 ${producto.categoria}
 </div>
