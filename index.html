@@ -139,6 +139,13 @@ select{
     display:flex;
     flex-direction:column;
 }
+   .foto-producto{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+    border-radius:12px;
+    margin-bottom:14px;
+} 
 
 .categoria{
     color:#a0657c;
@@ -517,7 +524,14 @@ formatoPrecio(producto.precio) +
 contenedor.innerHTML += `
 
 <article class="producto">
-
+${fotosProductos[producto.codigo] ? `
+<img
+    src="${fotosProductos[producto.codigo]}"
+    alt="${producto.nombre}"
+    class="foto-producto"
+    loading="lazy"
+>
+` : ""}
 <div class="categoria">
 ${producto.categoria}
 </div>
