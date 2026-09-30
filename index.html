@@ -7,259 +7,222 @@
 <title>Ale Ventas Alerce</title>
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    box-sizing: border-box;
 }
 
-body{
-    font-family:Arial, sans-serif;
-    background:#fff8fb;
-    color:#493a40;
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fff7fa;
+    color: #333;
 }
 
-/* ENCABEZADO */
-
-header{
-    text-align:center;
-    padding:30px 20px;
-    background:linear-gradient(135deg,#f8dce7,#efb9ce);
+header {
+    background: linear-gradient(135deg, #f7a9c4, #ffd3e1);
+    padding: 35px 20px;
+    text-align: center;
 }
 
-.logo{
-    width:160px;
-    height:160px;
-    object-fit:cover;
-    border-radius:50%;
-    border:5px solid white;
-    box-shadow:0 5px 18px rgba(0,0,0,.15);
+header h1 {
+    margin: 0;
+    font-size: 38px;
+    color: #7a2848;
 }
 
-header h1{
-    margin-top:15px;
-    color:#684555;
-    font-size:2.2rem;
+header p {
+    margin: 10px 0 0;
+    color: #633647;
 }
 
-header p{
-    margin-top:8px;
-    color:#725565;
+nav {
+    background: white;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,.08);
 }
 
-/* MENÚ */
-
-nav{
-    background:white;
-    padding:15px;
-    text-align:center;
-    position:sticky;
-    top:0;
-    z-index:10;
-    box-shadow:0 2px 10px rgba(0,0,0,.08);
+nav a {
+    color: #a73e67;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 12px;
 }
 
-nav a{
-    text-decoration:none;
-    color:#8d526a;
-    font-weight:bold;
-    margin:0 12px;
+main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px 20px;
 }
 
-/* INTRO */
-
-.intro{
-    text-align:center;
-    max-width:800px;
-    margin:auto;
-    padding:45px 20px 20px;
+.intro {
+    text-align: center;
+    margin-bottom: 30px;
 }
 
-.intro h2{
-    color:#824d62;
-    margin-bottom:12px;
+.intro h2 {
+    color: #a73e67;
 }
 
-.intro p{
-    line-height:1.6;
+.filtros {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
 }
 
-/* CATÁLOGO */
-
-.catalogo{
-    max-width:1200px;
-    margin:auto;
-    padding:30px 20px 60px;
+.filtros input,
+.filtros select {
+    flex: 1;
+    min-width: 220px;
+    padding: 13px;
+    border: 1px solid #e6b8c8;
+    border-radius: 10px;
+    background: white;
+    font-size: 15px;
 }
 
-.catalogo h2{
-    text-align:center;
-    color:#824d62;
-    margin-bottom:25px;
+#contador {
+    margin-bottom: 20px;
+    color: #777;
 }
 
-/* BUSCADOR */
-
-.filtros{
-    display:grid;
-    grid-template-columns:2fr 1fr;
-    gap:12px;
-    margin-bottom:15px;
+#productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
 }
 
-input,
-select{
-    width:100%;
-    padding:14px;
-    border:1px solid #e3c3cf;
-    border-radius:12px;
-    font-size:16px;
-    background:white;
+.producto {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 3px 14px rgba(0,0,0,.09);
+    padding-bottom: 18px;
 }
 
-#contador{
-    margin-bottom:20px;
-    color:#806d75;
+.contenedor-foto {
+    position: relative;
+    height: 240px;
+    background: #f7edf1;
 }
 
-/* PRODUCTOS */
-
-.grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
+.foto-producto {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
-.producto{
-    background:white;
-    padding:20px;
-    border-radius:16px;
-    box-shadow:0 4px 15px rgba(0,0,0,.08);
-
-    display:flex;
-    flex-direction:column;
-}
-   .foto-producto{
-    width:100%;
-    height:260px;
-    object-fit:cover;
-    border-radius:12px;
-    margin-bottom:14px;
-} 
-
-.categoria{
-    color:#a0657c;
-    font-size:12px;
-    font-weight:bold;
-    text-transform:uppercase;
-    margin-bottom:8px;
+.foto-referencial {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    background: rgba(255,255,255,.9);
+    padding: 5px 8px;
+    border-radius: 8px;
+    font-size: 11px;
+    color: #666;
 }
 
-.producto h3{
-    color:#543f48;
-    margin-bottom:10px;
+.sin-foto {
+    height: 170px;
+    background: linear-gradient(135deg, #ffe2ec, #fff3f7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #a85b77;
+    padding: 20px;
 }
 
-.precio{
-    color:#c1537e;
-    font-size:23px;
-    font-weight:bold;
-    margin-bottom:10px;
+.contenido {
+    padding: 16px 16px 0;
 }
 
-.stock{
-    font-weight:bold;
-    margin-bottom:8px;
+.categoria {
+    color: #b34d75;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 7px;
 }
 
-.detalle{
-    color:#78656d;
-    font-size:14px;
-    line-height:1.4;
-    margin-bottom:18px;
+.producto h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
 }
 
-/* WHATSAPP */
-
-.boton{
-    display:block;
-    text-align:center;
-    text-decoration:none;
-    background:#d8769c;
-    color:white;
-    padding:12px;
-    border-radius:10px;
-    font-weight:bold;
-    margin-top:auto;
+.precio {
+    font-size: 22px;
+    font-weight: bold;
+    color: #b52e63;
+    margin-bottom: 8px;
 }
 
-.boton:hover{
-    background:#bf5e84;
+.stock {
+    font-size: 14px;
+    margin-bottom: 8px;
 }
 
-/* CONTACTO */
-
-.contacto{
-    text-align:center;
-    padding:50px 20px;
-    background:#f3d3df;
+.detalle {
+    font-size: 13px;
+    color: #666;
+    min-height: 35px;
+    white-space: pre-line;
 }
 
-.contacto h2{
-    color:#684555;
-    margin-bottom:10px;
+.boton {
+    display: block;
+    margin-top: 15px;
+    background: #25D366;
+    color: white;
+    padding: 11px;
+    border-radius: 9px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
 }
 
-.contacto p{
-    margin-bottom:20px;
+.boton:hover {
+    opacity: .9;
 }
 
-.whatsapp{
-    display:inline-block;
-    background:#25D366;
-    color:white;
-    text-decoration:none;
-    padding:15px 25px;
-    border-radius:30px;
-    font-weight:bold;
+footer {
+    margin-top: 45px;
+    padding: 30px 20px;
+    text-align: center;
+    background: #7a2848;
+    color: white;
 }
 
-/* FOOTER */
-
-footer{
-    background:#684555;
-    color:white;
-    text-align:center;
-    padding:25px;
-}
-
-/* CELULAR */
-
-@media(max-width:850px){
-
-    .grid{
-        grid-template-columns:repeat(2,1fr);
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 30px;
     }
 
-}
-
-@media(max-width:600px){
-
-    .logo{
-        width:135px;
-        height:135px;
+    #productos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
     }
 
-    header h1{
-        font-size:1.8rem;
+    main {
+        padding: 20px 10px;
     }
 
-    .filtros{
-        grid-template-columns:1fr;
+    .contenedor-foto {
+        height: 190px;
     }
 
-    .grid{
-        grid-template-columns:1fr;
+    .contenido {
+        padding: 12px 10px 0;
+    }
+
+    .producto h3 {
+        font-size: 15px;
+    }
+
+    .precio {
+        font-size: 18px;
     }
 }
 </style>
@@ -268,304 +231,289 @@ footer{
 <body>
 
 <header id="inicio">
-
-    <!-- CONSERVAMOS TU LOGO -->
-    <img
-        src="img/Logo.png"
-        alt="Logo Ale Ventas Alerce"
-        class="logo"
-    >
-
     <h1>Ale Ventas Alerce</h1>
-
-    <p>Ropa, accesorios, ofertas y mucho más 💗</p>
-
+    <p>Encuentra ropa y productos disponibles para ti</p>
 </header>
 
-
 <nav>
-
-<a href="#inicio">Inicio</a>
-<a href="#catalogo">Catálogo</a>
-<a href="#contacto">Contacto</a>
-
+    <a href="#inicio">Inicio</a>
+    <a href="#catalogo">Catálogo</a>
+    <a href="#contacto">Contacto</a>
 </nav>
 
+<main>
 
 <section class="intro">
-
-<h2>Encuentra lo que buscas</h2>
-
-<p>
-Revisa nuestro catálogo y utiliza el buscador para encontrar
-productos. Puedes consultar disponibilidad, tallas y otros
-detalles directamente por WhatsApp.
-</p>
-
+    <h2 id="catalogo">Catálogo</h2>
+    <p>Revisa nuestros productos y consulta disponibilidad directamente por WhatsApp.</p>
 </section>
 
-
-<main class="catalogo" id="catalogo">
-
-<h2>Catálogo</h2>
-
 <div class="filtros">
+    <input
+        id="buscar"
+        type="search"
+        placeholder="Buscar producto..."
+    >
 
-<input
-    type="search"
-    id="buscar"
-    placeholder="Buscar producto..."
->
-
-<select id="filtroCategoria">
-
-<option value="">Todas las categorías</option>
-
-</select>
-
+    <select id="filtroCategoria">
+        <option value="">Todas las categorías</option>
+    </select>
 </div>
 
-<p id="contador"></p>
+<div id="contador"></div>
 
-<div class="grid" id="productos"></div>
+<section id="productos"></section>
 
 </main>
 
-
-<section class="contacto" id="contacto">
-
-<h2>¿Te gustó algo?</h2>
-
-<p>
-Consulta directamente con Ale Ventas Alerce.
-</p>
-
-<a
-class="whatsapp"
-href="https://wa.me/56950446613?text=Hola%2C%20vi%20el%20cat%C3%A1logo%20de%20Ale%20Ventas%20Alerce."
-target="_blank"
->
-Hablar por WhatsApp
-</a>
-
-</section>
-
-
-<footer>
-
-<p>© 2026 Ale Ventas Alerce</p>
-
+<footer id="contacto">
+    <strong>Ale Ventas Alerce</strong>
+    <p>Consultas y pedidos por WhatsApp: +56 9 5044 6613</p>
+    <small>© 2026 Ale Ventas Alerce</small>
 </footer>
 
+
 <script src="inventario.js"></script>
-<script src="fotos-productos.js"></script>
-    <script src="fotos-productos.js"></script>
+
 <script>
+const buscador = document.getElementById("buscar");
+const filtroCategoria = document.getElementById("filtroCategoria");
+const contenedor = document.getElementById("productos");
+const contador = document.getElementById("contador");
+
 
 /*
-=========================================
-PRODUCTOS
-=========================================
+FOTOS REALES QUE YA EXISTEN EN LA CARPETA IMG.
 
-Aquí se agregan los productos.
-
-Formato:
-
-{
- nombre:"",
- categoria:"",
- precio:0,
- stock:0,
- detalle:""
-}
-
+Son imágenes referenciales: no afirmamos que correspondan
+al modelo exacto del producto.
 */
+function obtenerFotoReferencial(producto) {
 
+    const texto = (
+        String(producto.nombre || "") + " " +
+        String(producto.categoria || "")
+    ).toLowerCase();
 
+    if (texto.includes("panty efecto piel")) {
+        return "img/panty_piel.png";
+    }
 
-/* NO TOCAR DESDE AQUÍ */
+    if (texto.includes("jeans flare")) {
+        return "img/jeans_flare_azul.png";
+    }
 
-const contenedor =
-document.getElementById("productos");
+    if (texto.includes("jeans")) {
+        return "img/jeans_azul_claro.png";
+    }
 
-const buscador =
-document.getElementById("buscar");
+    if (
+        texto.includes("cotele") &&
+        texto.includes("pantal")
+    ) {
+        return "img/Cotele_pantalón.png";
+    }
 
-const filtroCategoria =
-document.getElementById("filtroCategoria");
+    if (
+        texto.includes("flare") ||
+        texto.includes("cargo")
+    ) {
+        return "img/Flare_cargo.png";
+    }
 
-const contador =
-document.getElementById("contador");
+    if (
+        texto.includes("buzo") ||
+        texto.includes("polar")
+    ) {
+        return "img/buzo_rosa.png";
+    }
 
+    if (texto.includes("conjunto")) {
+        return "img/conjunto_polar.png";
+    }
 
-function formatoPrecio(numero){
-
-return "$" +
-Number(numero).toLocaleString("es-CL");
-
+    return null;
 }
 
 
-/* CREAR CATEGORÍAS */
+function formatoPrecio(valor) {
 
-const categorias =
-[...new Set(
-inventario.map(producto => producto.categoria)
-)];
+    const numero = Number(valor);
 
+    if (!Number.isFinite(numero)) {
+        return "";
+    }
 
-categorias.sort();
-
-
-categorias.forEach(categoria => {
-
-const opcion =
-document.createElement("option");
-
-opcion.value = categoria;
-opcion.textContent = categoria;
-
-filtroCategoria.appendChild(opcion);
-
-});
-
-
-/* MOSTRAR PRODUCTOS */
-
-function mostrarProductos(){
-
-const texto =
-buscador.value.toLowerCase().trim();
-
-const categoriaElegida =
-filtroCategoria.value;
-
-
-const resultados =
-inventario.filter(producto => {
-
-const coincideTexto =
-
-producto.nombre
-.toLowerCase()
-.includes(texto)
-
-||
-
-producto.notas
-.toLowerCase()
-.includes(texto);
-
-
-const coincideCategoria =
-
-categoriaElegida === ""
-
-||
-
-producto.categoria === categoriaElegida;
-
-
-return coincideTexto &&
-coincideCategoria;
-
-});
-
-
-contador.textContent =
-resultados.length +
-" productos encontrados";
-
-
-contenedor.innerHTML = "";
-
-resultados.forEach(producto => {
-
-const mensaje = encodeURIComponent(
-"Hola, quisiera consultar por " +
-producto.nombre +
-". ¿Está disponible?"
-);
-
-
-
-contenedor.innerHTML += `
-
-<article class="producto">
-
-${(() => {
-    const foto = obtenerFotoProducto(producto);
-
-    if (!foto) return "";
-
-    return `
-        <div class="contenedor-foto">
-            <img
-                src="${foto.ruta}"
-                alt="${producto.nombre}"
-                class="foto-producto"
-                loading="lazy"
-            >
-            ${!foto.exacta ? `
-                <span class="foto-referencial">
-                    Foto referencial
-                </span>
-            ` : ""}
-        </div>
-    `;
-})()}
-
-<div class="categoria">
-${producto.categoria}
-</div>
-
-<h3>
-${producto.nombre}
-</h3>
-
-<div class="precio">
-${formatoPrecio(producto.precio)}
-</div>
-
-<div class="stock">
-Stock: ${producto.stock}
-</div>
-
-<div class="detalle">
-${producto.notas}
-</div>
-
-<a
-class="boton"
-target="_blank"
-href="https://wa.me/56950446613?text=${mensaje}"
->
-Consultar por WhatsApp
-</a>
-
-</article>
-
-`;
-
-});
-
+    return numero.toLocaleString(
+        "es-CL",
+        {
+            style: "currency",
+            currency: "CLP",
+            maximumFractionDigits: 0
+        }
+    );
 }
+
+
+function cargarCategorias() {
+
+    const categorias = [
+        ...new Set(
+            inventario
+                .map(producto => producto.categoria)
+                .filter(Boolean)
+        )
+    ].sort((a,b) =>
+        String(a).localeCompare(String(b), "es")
+    );
+
+    categorias.forEach(categoria => {
+
+        const opcion = document.createElement("option");
+
+        opcion.value = categoria;
+        opcion.textContent = categoria;
+
+        filtroCategoria.appendChild(opcion);
+    });
+}
+
+
+function mostrarProductos() {
+
+    const texto = buscador.value
+        .toLowerCase()
+        .trim();
+
+    const categoriaElegida =
+        filtroCategoria.value;
+
+    const resultados = inventario.filter(producto => {
+
+        const nombre =
+            String(producto.nombre || "")
+            .toLowerCase();
+
+        const notas =
+            String(producto.notas || "")
+            .toLowerCase();
+
+        const coincideTexto =
+            nombre.includes(texto) ||
+            notas.includes(texto);
+
+        const coincideCategoria =
+            categoriaElegida === "" ||
+            producto.categoria === categoriaElegida;
+
+        return coincideTexto && coincideCategoria;
+    });
+
+
+    contador.textContent =
+        resultados.length +
+        " productos encontrados";
+
+
+    contenedor.innerHTML = "";
+
+
+    resultados.forEach(producto => {
+
+        const foto =
+            obtenerFotoReferencial(producto);
+
+        const mensaje =
+            encodeURIComponent(
+                "Hola, quisiera consultar por " +
+                producto.nombre +
+                ". ¿Está disponible?"
+            );
+
+
+        const tarjeta =
+            document.createElement("article");
+
+        tarjeta.className = "producto";
+
+
+        const bloqueFoto = foto
+            ? `
+                <div class="contenedor-foto">
+                    <img
+                        src="${foto}"
+                        alt="Imagen referencial de ${producto.nombre}"
+                        class="foto-producto"
+                        loading="lazy"
+                    >
+                    <span class="foto-referencial">
+                        Foto referencial
+                    </span>
+                </div>
+              `
+            : `
+                <div class="sin-foto">
+                    Producto disponible
+                </div>
+              `;
+
+
+        tarjeta.innerHTML = `
+            ${bloqueFoto}
+
+            <div class="contenido">
+
+                <div class="categoria">
+                    ${producto.categoria || ""}
+                </div>
+
+                <h3>
+                    ${producto.nombre || ""}
+                </h3>
+
+                <div class="precio">
+                    ${formatoPrecio(producto.precio)}
+                </div>
+
+                <div class="stock">
+                    Stock: ${producto.stock ?? ""}
+                </div>
+
+                <div class="detalle">
+                    ${producto.notas || ""}
+                </div>
+
+                <a
+                    class="boton"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://wa.me/56950446613?text=${mensaje}"
+                >
+                    Consultar por WhatsApp
+                </a>
+
+            </div>
+        `;
+
+        contenedor.appendChild(tarjeta);
+    });
+}
+
+
+cargarCategorias();
+mostrarProductos();
 
 
 buscador.addEventListener(
-"input",
-mostrarProductos
+    "input",
+    mostrarProductos
 );
 
 
 filtroCategoria.addEventListener(
-"change",
-mostrarProductos
+    "change",
+    mostrarProductos
 );
-
-
-mostrarProductos();
-
 </script>
 
 </body>
